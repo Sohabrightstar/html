@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>My Profile</title>
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <!-- STICKY HEADER -->
+    <header class="header">
+
+        <h1>My Profile</h1>
+
+        <nav>
+            <a href="#about">About</a>
+            <a href="#skills">Skills</a>
+            <a href="#contact">Contact</a>
+        </nav>
+
+    </header>
+
+
+    <!-- MAIN CONTENT -->
+    <main>
+
+        <!-- PROFILE CARD -->
+        <section class="profile-card">
+
+            <!-- IMAGE CONTAINER -->
+            <div class="image-container">
+
+                <img
+                    src="https://i.pravatar.cc/250?img=47"
+                    alt="Profile picture"
+                >
+
+                <!-- ABSOLUTE BADGE -->
+                <span class="notification-badge">3</span>
+
+            </div>
+
+            <h2>Alex Johnson</h2>
+
+            <p class="role">
+                Computer Science Student
+            </p>
+
+            <p>
+                I am a computer science student who enjoys
+                programming, web development and learning
+                new technologies.
+            </p>
+
+            <button id="openModal">
+                View Profile
+            </button>
+
+        </section>
+
+
+        <!-- ABOUT SECTION -->
+        <section class="content" id="about">
+
+            <h2>About Me</h2>
+
+            <p>
+                I am interested in technology and software development.
+                I enjoy creating websites and learning programming languages.
+            </p>
+
+            <p>
+                My goal is to become a skilled developer and work on
+                useful technology projects.
+            </p>
+
+        </section>
+
+
+        <!-- SKILLS SECTION -->
+        <section class="content" id="skills">
+
+            <h2>My Skills</h2>
+
+            <p>
+                HTML, CSS, Python, JavaScript and basic database concepts
+                are some of the technologies I am learning.
+            </p>
+
+            <p>
+                I also enjoy solving programming problems and building
+                small projects.
+            </p>
+
+        </section>
+
+
+        <!-- LEARNING JOURNEY -->
+        <section class="content">
+
+            <h2>My Learning Journey</h2>
+
+            <p>
+                Learning programming takes practice and patience.
+                Every project helps me understand new concepts.
+            </p>
+
+            <p>
+                CSS positioning is particularly useful when creating
+                modern and interactive websites.
+            </p>
+
+            <p>
+                Responsive design allows websites to work properly
+                on different screen sizes.
+            </p>
+
+            <p>
+                I continue to improve my skills by building projects
+                and experimenting with different web technologies.
+            </p>
+
+        </section>
+
+
+        <!-- CONTACT SECTION -->
+        <section class="content" id="contact">
+
+            <h2>Contact</h2>
+
+            <p>
+                Email: alex@example.com
+            </p>
+
+            <p>
+                Thank you for visiting my profile.
+            </p>
+
+        </section>
+
+    </main>
+
+
+    <!-- FIXED HELP BUTTON -->
+    <button class="help-button" title="Need Help?">
+        ?
+    </button>
+
+
+    <!-- MODAL -->
+    <div class="modal" id="profileModal">
+
+        <div class="modal-box">
+
+            <!-- ABSOLUTE CLOSE BUTTON -->
+            <button class="close-button" id="closeModal">
+                ×
+            </button>
+
+            <h2>Profile Information</h2>
+
+            <p>
+                Alex is a computer science student interested
+                in programming and web development.
+            </p>
+
+            <button id="closeModalBottom">
+                Close
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <!-- JAVASCRIPT -->
+    <script>
+
+        const openModal =
+            document.getElementById("openModal");
+
+        const closeModal =
+            document.getElementById("closeModal");
+
+        const closeModalBottom =
+            document.getElementById("closeModalBottom");
+
+        const profileModal =
+            document.getElementById("profileModal");
+
+
+        // Open modal
+        openModal.addEventListener("click", function () {
+
+            profileModal.classList.add("show");
+
+        });
+
+
+        // Close modal using X
+        closeModal.addEventListener("click", function () {
+
+            profileModal.classList.remove("show");
+
+        });
+
+
+        // Close modal using Close button
+        closeModalBottom.addEventListener("click", function () {
+
+            profileModal.classList.remove("show");
+
+        });
+
+    </script>
+
+</body>
+
+</html>
