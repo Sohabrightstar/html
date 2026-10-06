@@ -1,0 +1,310 @@
+/* Remove default spacing */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* Whole page */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f1ea;
+    color: #333;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+.header {
+    background-color: #5b3a70;
+    color: white;
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.header h1 {
+    font-size: 45px;
+    margin-bottom: 10px;
+}
+
+.header p {
+    font-size: 18px;
+}
+
+
+/* =========================
+   NAVIGATION
+========================= */
+
+.navbar {
+    background-color: #ffffff;
+
+    /* Flexbox */
+    display: flex;
+
+    /* Put links in the center */
+    justify-content: center;
+
+    /* Space between links */
+    gap: 40px;
+
+    padding: 18px;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: #5b3a70;
+    font-size: 18px;
+    font-weight: bold;
+
+    /* Makes hover animation smooth */
+    transition: 0.3s;
+}
+
+
+/* Navigation hover */
+.navbar a:hover {
+    color: #d35400;
+}
+
+
+/* =========================
+   GALLERY
+========================= */
+
+.gallery-section {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.gallery-section h2 {
+    font-size: 32px;
+    margin-bottom: 30px;
+}
+
+
+/* Gallery container */
+.gallery-container {
+
+    /* Flexbox */
+    display: flex;
+
+    /* Center cards */
+    justify-content: center;
+
+    /* Space between cards */
+    gap: 25px;
+
+    /* Allow cards to move to next row */
+    flex-wrap: wrap;
+}
+
+
+/* Individual artwork card */
+.art-card {
+    background-color: white;
+
+    width: 250px;
+
+    border: 2px solid #ddd;
+
+    border-radius: 10px;
+
+    /* Shadow around card */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+
+    overflow: hidden;
+
+    transition: 0.3s;
+}
+
+
+/* Card hover */
+.art-card:hover {
+    transform: translateY(-8px);
+
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
+}
+
+
+/* Artwork area */
+.art-image {
+    height: 180px;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    color: white;
+
+    font-size: 20px;
+
+    font-weight: bold;
+}
+
+
+/* Different artwork backgrounds */
+
+.art-one {
+    background: linear-gradient(135deg, #ff9966, #ff5e62);
+}
+
+.art-two {
+    background: linear-gradient(135deg, #56ccf2, #2f80ed);
+}
+
+.art-three {
+    background: linear-gradient(135deg, #a18cd1, #fbc2eb);
+}
+
+.art-four {
+    background: linear-gradient(135deg, #11998e, #38ef7d);
+}
+
+
+/* Artwork title */
+.art-card h3 {
+    margin: 18px 10px 8px;
+    color: #5b3a70;
+}
+
+
+/* Artwork description */
+.art-card p {
+    padding: 0 15px 20px;
+    line-height: 1.5;
+}
+
+
+/* =========================
+   ABOUT SECTION
+========================= */
+
+.about-section {
+    background-color: white;
+
+    text-align: center;
+
+    padding: 50px 20px;
+}
+
+.about-section h2 {
+    font-size: 30px;
+    margin-bottom: 15px;
+}
+
+.about-section p {
+    max-width: 700px;
+
+    margin: auto;
+
+    line-height: 1.7;
+
+    font-size: 17px;
+}
+
+
+/* =========================
+   CALL TO ACTION
+========================= */
+
+.cta-section {
+    text-align: center;
+
+    background-color: #eadcf2;
+
+    padding: 50px 20px;
+}
+
+.cta-section h2 {
+    font-size: 30px;
+
+    margin-bottom: 15px;
+}
+
+.cta-section p {
+    margin-bottom: 25px;
+}
+
+
+/* Button */
+.cta-section button {
+    background-color: #5b3a70;
+
+    color: white;
+
+    border: none;
+
+    padding: 14px 28px;
+
+    font-size: 16px;
+
+    border-radius: 6px;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+
+/* Button hover */
+.cta-section button:hover {
+    background-color: #d35400;
+
+    transform: scale(1.05);
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    background-color: #2d2433;
+
+    color: white;
+
+    text-align: center;
+
+    padding: 25px;
+}
+
+
+/* =========================
+   RESPONSIVE DESIGN
+========================= */
+
+/* For mobile phones */
+
+@media (max-width: 600px) {
+
+    .header h1 {
+        font-size: 35px;
+    }
+
+
+    .navbar {
+        flex-direction: column;
+
+        align-items: center;
+
+        gap: 15px;
+    }
+
+
+    .gallery-container {
+        flex-direction: column;
+
+        align-items: center;
+    }
+
+
+    .art-card {
+        width: 90%;
+    }
+}
